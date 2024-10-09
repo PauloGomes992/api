@@ -1,15 +1,25 @@
-package br.com.meteora.api.model;
+package br.com.meteora.api.model.pessoa;
 
+import jakarta.persistence.*;
 import lombok.*;
 
+
+@Table(name = "pessoas")
+@Entity
 @Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(of = "id")
 public class PessoaModel {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String nome;
-    private String CPF;
+
+    private String cpf;
+
     private char genero;
     private String dataDeNascimento;
     private String email;

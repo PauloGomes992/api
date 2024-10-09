@@ -1,4 +1,4 @@
-package br.com.meteora.api.model;
+package br.com.meteora.api.model.produto;
 
 import lombok.*;
 
