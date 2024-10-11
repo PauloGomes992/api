@@ -2,7 +2,7 @@ package br.com.meteora.api.model.pessoa;
 
 public record DadosCadastroPessoa(
         String nome,
-        String CPF,
+        String cpf,
         char genero,
         String dataDeNascimento,
         String email,
