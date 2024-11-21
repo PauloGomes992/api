@@ -26,6 +26,27 @@ public class ProdutoModel {
     @Enumerated(EnumType.STRING)
     private Fabricante fabricante;
 
+    public void atualizarInformacoes(DadosAtualizarProduto dados) {
+        if (dados.nome() != null) {
+            this.nome = dados.nome();
+        }
+        if (dados.tamanho() != null) {
+            this.tamanho = dados.tamanho();
+        }
+        if (dados.modelo() != null) {
+            this.modelo = dados.modelo();
+        }
+        if (dados.descricao() != null) {
+            this.descricao = dados.descricao();
+        }
+        if (dados.preco() != 0.0) {
+            this.preco = dados.preco();
+        }
+        if (dados.cor() != null) {
+            this.cor = dados.cor();
+        }
+    }
+
     public ProdutoModel(DadosCadastroProduto dados) {
         this.nome = dados.nome();
         this.tamanho = dados.tamanho();
